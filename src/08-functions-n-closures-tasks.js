@@ -23,7 +23,7 @@
  *
  */
 function getComposition(f, g) {
-  return function (x) {
+  return function composition(x) {
     return f(g(x));
   };
 }
@@ -45,7 +45,7 @@ function getComposition(f, g) {
  *
  */
 function getPowerFunction(exponent) {
-  return function (x) {
+  return function mathPower(x) {
     return x ** exponent;
   };
 }
@@ -167,7 +167,7 @@ function partialUsingArguments(/* fn, ...args1 */) {
  */
 function getIdGeneratorFunction(startFrom) {
   let currentId = startFrom;
-  return function () {
+  return function idGenerator() {
     const id = currentId;
     currentId += 1;
     return id;
